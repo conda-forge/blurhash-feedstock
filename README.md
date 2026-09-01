@@ -13,10 +13,11 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=27341&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/blurhash-feedstock?branchName=main">
+      <a href="https://github.com/conda-forge/blurhash-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/blurhash-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
     </td>
   </tr>
@@ -39,31 +40,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `blurhash` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install blurhash
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install blurhash
 ```
 
-It is possible to list all of the versions of `blurhash` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add blurhash
+# for installing globally
+pixi global install blurhash
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `blurhash` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search blurhash --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search blurhash --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search blurhash --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -75,6 +118,8 @@ mamba repoquery whoneeds blurhash --channel conda-forge
 # List dependencies of `blurhash`:
 mamba repoquery depends blurhash --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
@@ -144,7 +189,4 @@ Feedstock Maintainers
 =====================
 
 * [@akrherz](https://github.com/akrherz/)
-
-
-<!-- dummy commit to enable rerendering -->
 
